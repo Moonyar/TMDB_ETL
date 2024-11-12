@@ -14,6 +14,9 @@ def transform_movie_data(movies):
     # make sure numeric columns have the right type
     df[['vote_average', 'vote_count', 'popularity']] = df[['vote_average', 'vote_count', 'popularity']].apply(pd.to_numeric, errors='coerce')
 
+    # have to convert the genre_ids list to a string to be able to store it in the database
+    df['genre_ids'] = df['genre_ids'].apply(lambda x: ','.join(map(str, x)) if isinstance(x, list) else '')
+
     # drop the rows with invalid release_dates or numeric values
     df = df.dropna().reset_index(drop=True)
 
