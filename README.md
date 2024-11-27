@@ -1,7 +1,5 @@
 # Movie Data ETL Pipeline using TMDB API
 
-This project is a data engineering pipeline built using Python, SQL, and Apache Airflow to automate the process of extracting, transforming, and loading (ETL) movie data from The Movie Database (TMDB) API into a structured database.
-
 
 ## Project Overview
 The pipeline is designed to automate the retrieval and processing of movie data, making it easy to analyze and query. Apache Airflow is used for scheduling and managing the ETL workflow, ensuring efficient data processing and automation.
